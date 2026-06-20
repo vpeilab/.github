@@ -1,0 +1,38 @@
+# These are supported funding model platforms
+
+# GitHub Sponsors: Replace with up to 4 GitHub Sponsors-enabled usernames
+github:
+  # - vpeilab
+  # - founder-username
+
+# Patreon: Replace with a single Patreon username
+patreon: # vpeilab
+
+# Open Collective: Replace with a single Open Collective username
+open_collective: # vpeilab
+
+# Ko-fi: Replace with a single Ko-fi username
+ko_fi: # vpeilab
+
+# Tidelift: Replace with a single Tidelift platform-name/package-name
+tidelift: # npm/babel
+
+# Community Bridge: Replace with a single Community Bridge project-name
+community_bridge: # cloud-foundry
+
+# Liberapay: Replace with a single Liberapay username
+liberapay: # vpeilab
+
+# IssueHunt: Replace with a single IssueHunt username
+issuehunt: # vpeilab
+
+# Otechie: Replace with a single Otechie username
+otechie: # vpeilab
+
+# LFX Crowdfunding: Replace with a single LFX Crowdfunding project-name
+lfx_crowdfunding: # cloud-foundry
+
+# Custom: Replace with up to 4 custom sponsorship URLs
+custom:
+  # - https://vpei.lab/donate
+  # - https://vpei.lab/membership
