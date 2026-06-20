@@ -1,0 +1,77 @@
+name: Bug Report
+description: Report a technical defect in the system.
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report a technical defect. This is not for theoretical objections or experiment coordination.
+
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Affected Layer
+      description: Which layer contains the defect?
+      options:
+        - L0 - embodied-env
+        - L1 - vss
+        - L2 - dppcm
+        - L3 - ltcp
+        - L4 - vpl
+        - L5 - gwt-consciousness
+        - Meta - infrastructure
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: What happened? Be specific.
+      placeholder: |
+        The FramePayload contains an extra "depth" field, violating the Reality Boundary.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction Steps
+      description: Provide exact steps to reproduce.
+      placeholder: |
+        1. Clone repo at commit abc1234
+        2. Run `python experiment.py --seed 42`
+        3. Inspect FramePayload output
+        4. Observe forbidden field
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      placeholder: |
+        FramePayload should contain only: type, tick, timestamp, rgb, resolution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        OS: Ubuntu 22.04
+        GPU: RTX 4090
+        Python: 3.10
+        Commit: abc1234
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: ironlaw
+    attributes:
+      label: Iron Law Check
+      options:
+        - label: This bug does not involve leaking ground truth to cognitive modules.
+          required: true
