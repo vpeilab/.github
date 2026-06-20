@@ -1,0 +1,67 @@
+name: Experiment Reproduction
+description: Request reproduction or report failure to reproduce an experiment.
+title: "[EXP] "
+labels: ["experiment", "reproduction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request reproduction of a Tier 3+ experiment or report failure to reproduce.
+
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Target Tier
+      options:
+        - Tier 1 - Active Learning
+        - Tier 2 - Causal Understanding
+        - Tier 3 - High-Order Intelligence
+        - Tier 4 - Blind-Box Causality
+    validations:
+      required: true
+
+  - type: input
+    id: original_experiment
+    attributes:
+      label: Original Experiment ID
+      placeholder: tier-3-20260619-001
+    validations:
+      required: true
+
+  - type: textarea
+    id: protocol
+    attributes:
+      label: Experiment Protocol
+      description: Link to the protocol document and describe the setup.
+    validations:
+      required: true
+
+  - type: textarea
+    id: results
+    attributes:
+      label: Your Results
+      description: What did you observe? Include logs, metrics, and timestamps.
+    validations:
+      required: true
+
+  - type: textarea
+    id: baseline
+    attributes:
+      label: Baseline Results
+      description: Results for PPO and Random baselines under identical conditions.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Compliance Checklist
+      options:
+        - label: Started from random weights.
+          required: true
+        - label: No ground truth leaked.
+          required: true
+        - label: Local learning only in core system.
+          required: true
+        - label: Seeds and configs logged.
+          required: true
