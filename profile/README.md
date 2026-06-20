@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/vpeilab/.github/raw/main/profile/vpeilab_logo_128.png" width="96" height="96" alt="VPEI Lab">
+  <img src="https://github.com/vpeilab/.github/raw/main/profile/IMG_1211.jpeg" width="96" height="96" alt="VPEI Lab">
 </p>
 
 <h1 align="center">VPEI Lab</h1>
