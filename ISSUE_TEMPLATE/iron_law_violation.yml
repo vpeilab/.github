@@ -1,0 +1,61 @@
+name: Iron Law Violation Report
+description: Report a suspected violation of the Three Iron Laws.
+title: "[IRON] "
+labels: ["iron-law", "critical"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This is a serious report.** Iron Law violations compromise the integrity of the entire research program. Do not file frivolously.
+
+  - type: dropdown
+    id: law
+    attributes:
+      label: Violated Law
+      description: Which Iron Law was violated?
+      options:
+        - Reality Boundary - Ground truth leaked to cognitive module
+        - Zero Pretraining - Experiment loaded pre-trained weights
+        - Local Learning - Global backprop used in core system
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Provide code snippets, logs, or experiment records demonstrating the violation.
+      placeholder: |
+        In file src/agent.py line 45:
+        ```
+        position = env.get_object_position("cube")  # Class I violation
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Which experiment or publication is affected?
+      placeholder: |
+        Experiment tier-3-20260619-001 by @experimenter
+        PR #123 in vpeilab/dppcm
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: Repository / Commit
+      placeholder: vpeilab/dppcm@abc1234
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have verified this violation independently.
+          required: true
+        - label: I understand that false reports may result in sanctions.
+          required: true
